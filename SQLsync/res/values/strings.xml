@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SQLsync</string>
+    <string name="authority">com.example.samplesqlsync</string>
+</resources>

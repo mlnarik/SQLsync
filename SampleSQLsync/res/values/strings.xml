@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="result">Awaiting command</string>
+    <string name="sampleActivityTitle">Sample for SQLsync</string>
+    <string name="btTest">Test Conflicts</string>
+	<string name="btBench">Benchmark Synchronization</string>
+</resources>

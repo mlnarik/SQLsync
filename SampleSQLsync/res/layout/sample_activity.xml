@@ -1,0 +1,37 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/scroll"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:fillViewport="true">
+  
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="vertical">
+	    
+	    <Button android:id="@+id/btBench"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/btBench" 
+	            android:onClick="benchmarkSync"/>
+	    
+	    <Button android:id="@+id/btTest"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/btTest" 
+	            android:onClick="testConflicts"/>
+	    
+	    <TextView
+	        android:id="@+id/result"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/result"
+	        android:textSize="15.0dp"
+	        android:padding="5.0dp"
+	        android:layout_gravity="bottom"
+	        tools:context=".SampleActivity" />
+	
+	    
+	</LinearLayout>
+</ScrollView>
