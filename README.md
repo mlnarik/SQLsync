@@ -3,6 +3,13 @@ SQLsync
 
 This library will help you use master-master database synchronization (replication) between PostgreSQL and Android's SQLite database.
 
+##Features
+- Fast,
+- easy to use,
+- automatic conflict resolution,
+- minimal database usage restrictions,
+- logs conflicts.
+
 ##Instalation
 
 It is necessary to set up the library. If you don't follow described steps, it might not work correctly.
@@ -15,5 +22,3 @@ It is necessary to set up the library. If you don't follow described steps, it m
 6. Set your timezone for your Android emulator by clicking on Debug Configuration in Run menu. Then click on Target tab. In text field Additional Emulator Command Line Options enter your timezone, e.g. "-timezone Europe/Berlin".
 7. Extend SyncDatabaseHelper class and adapt it to your own liking. See SampleDatabaseHelper class in SampleSQL how to use it.
 8. Extend SyncProvider class. See SampleProvider for reference.
-
-##Customization
