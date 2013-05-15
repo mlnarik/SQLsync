@@ -1,14 +1,14 @@
 #SQLsync
 
-This library will help you apply master-master database synchronization (replication) between PostgreSQL and Android's SQLite database to your own Android application.
+This library will help your Android application to synchronize and replicate your local Android SQLite database with remote PostgreSQL database.
 
 ##Features
-- Fast,
-- easy to use,
-- automatic conflict resolution,
-- minimal database usage restrictions,
-- minimal hardware requirements,
-- logs conflicts.
+- fast
+- easy to use
+- automatic conflict resolution
+- minimal database usage restrictions
+- minimal hardware requirements
+- logs conflicts
 
 ##Requirements
 - custom server with PostgreSQL database (MySQL supported soon)
