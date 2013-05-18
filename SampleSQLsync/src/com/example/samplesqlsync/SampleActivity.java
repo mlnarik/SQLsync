@@ -30,8 +30,8 @@ public class SampleActivity extends Activity {
 	public long timeStart = 0;
 	
 	// URL must be same as library uses otherwise it won't work correctly
-	public final static String WEBSERVICE_URL = "http://10.0.0.32:9090";
-	//public final static String WEBSERVICE_URL = "http://nexusray.com/sqlsync/webservice";
+	//public final static String WEBSERVICE_URL = "http://10.0.0.32:9090";
+	public final static String WEBSERVICE_URL = "http://nexusray.com/sqlsync/webservice";
 	public final static String SCRIPT_BENCH_URL = WEBSERVICE_URL + "/sample/SampleBench.php";
 	TextView resultField = null; 
 	ContentResolver cr = null;

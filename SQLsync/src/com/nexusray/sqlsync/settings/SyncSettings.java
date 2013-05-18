@@ -12,8 +12,8 @@ public final class SyncSettings {
 	
 	// SERVICE settings
 	// To use SSL use 'https' in the URL and use proper port if needed
-	public final static String URL_WEBSERVICE = "http://10.0.0.32:9090/SyncService.php";
-	//public final static String URL_WEBSERVICE = "http://nexusray.com/sqlsync/webservice/SyncService.php";
+	//public final static String URL_WEBSERVICE = "http://10.0.0.32:9090/SyncService.php";
+	public final static String URL_WEBSERVICE = "http://nexusray.com/sqlsync/webservice/SyncService.php";
 	public final static int HTTP_TIMEOUT = 30000;
 		
 }
