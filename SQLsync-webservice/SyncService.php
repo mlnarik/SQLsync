@@ -10,8 +10,9 @@ include 'include/SQLCmds.php';
 
 $authorized = false;
 
-/*
- *	Provide your custom authorization of mobile users
+/**
+ * Provide your custom authorization of mobile users.
+ * This authorization is very basic and it might not be enough for your project.
  */
 if ($_POST["name"] == SyncSettings::SYNC_USERNAME && $_POST["pass"] == SyncSettings::SYNC_PASSWORD)
 	$authorized = true;
@@ -19,6 +20,9 @@ if ($_POST["name"] == SyncSettings::SYNC_USERNAME && $_POST["pass"] == SyncSetti
 
 if($authorized) {
 
+	/**
+	 * Synchronization process
+	 */
 	if ($_GET["a"] == "sync") {
 		include 'include/Sync.php';
 	}
@@ -26,9 +30,9 @@ if($authorized) {
 		//echo "Wrong page";
 		header("HTTP/1.0 404 Not Found");
 	}
+	// Add more services...
 }
 else {
-	//echo "Not authorized";
 	header("HTTP/1.0 403 Forbidden");
 }
 
