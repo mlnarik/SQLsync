@@ -5,11 +5,15 @@ import com.nexusray.sqlsync.settings.SyncSettings;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.util.Log;
 
 public class SampleDatabaseHelper extends SyncDatabaseHelper {
 	
 	private static final String logTag = "SampleSQLsync";
+	public final static Uri tableProducts = Uri.withAppendedPath(SyncSettings.AUTHORITY_URI, "products");
+	public final static Uri tableCustomers = Uri.withAppendedPath(SyncSettings.AUTHORITY_URI, "customers");
+	public final static Uri tableDeletedRows = Uri.withAppendedPath(SyncSettings.AUTHORITY_URI, "__SQLsyncDeletedRows");
 	
 	public SampleDatabaseHelper(Context context) {		
 		

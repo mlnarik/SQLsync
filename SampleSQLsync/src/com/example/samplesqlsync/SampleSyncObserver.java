@@ -3,16 +3,12 @@ package com.example.samplesqlsync;
 import com.nexusray.sqlsync.provider.SyncObserver;
 
 import android.os.Handler;
-import android.util.Log;
 
 public class SampleSyncObserver extends SyncObserver {
 
-	private SampleActivity activity;
 	
-	public SampleSyncObserver(Handler handler, SampleActivity activity) {
+	public SampleSyncObserver(Handler handler) {
 		super(handler);
-
-		this.activity = activity;
 	}
 
 	/**
@@ -27,14 +23,8 @@ public class SampleSyncObserver extends SyncObserver {
 	 */
 	@Override
 	public synchronized void onCompletedSync() {
-		if (activity.benchContinue) {
-			activity.benchContinue = false;
-			activity.runNextBenchmarkPhase(); 
-		}
-		else if (activity.testContinue) {
-			activity.testContinue = false;
-			activity.runNextTestPhase();			
-		}
+		SampleActivity.benchPhase.release();
+		SampleActivity.testPhase.release();
 		
 			
 	}
