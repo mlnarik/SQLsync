@@ -1,4 +1,4 @@
-package tasks;
+package com.example.samplesqlsync.tasks;
 
 import java.util.Random;
 

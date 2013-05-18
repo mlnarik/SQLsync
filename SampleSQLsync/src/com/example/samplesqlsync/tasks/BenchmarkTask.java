@@ -1,4 +1,4 @@
-package tasks;
+package com.example.samplesqlsync.tasks;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;

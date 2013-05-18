@@ -3,9 +3,9 @@ package com.example.samplesqlsync;
 
 import java.util.concurrent.Semaphore;
 
-import tasks.BenchmarkTask;
-import tasks.TestTask;
 
+import com.example.samplesqlsync.tasks.BenchmarkTask;
+import com.example.samplesqlsync.tasks.TestTask;
 import com.nexusray.sqlsync.settings.SyncSettings;
 import com.nexusray.sqlsync.sync.SyncExecutor;
 import android.os.Bundle;
