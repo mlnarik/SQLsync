@@ -1,6 +1,6 @@
 #SQLsync
 
-This library will help you synchronize databases across all mobile devices that uses your application. Library uses fast master-master replication that synchronizes application's database on any Android mobile device with remote PostgreSQL database. Remote database serves as middleman, it's always available and helps with synchronization.
+This library will help you synchronize databases across all mobile devices that uses your application. Library provides fast master-master replication that synchronizes application's database on any Android mobile device with remote PostgreSQL database. Remote database serves as middleman, it's always available and helps with synchronization.
 
 ##Features
 - fast
@@ -18,7 +18,7 @@ This library will help you synchronize databases across all mobile devices that 
 
 These are necessary steps to set up the library. If you don't follow described steps, synchronization might not work correctly.
 
-1. Install Android SDK, which also contains Eclipse. See [Android SDK](http://developer.android.com/sdk/index.html).
+1. Install Android SDK, which also contains Eclipse. See [Android SDK](http://developer.android.com/sdk/index.html) (Note: Google will soon provide custom IDE).
 2. Import this library to Eclipse. Click on Import in File menu. Select Android > Existing Android Code Into Workspace and click on Next then Browse and select folder with this library. Then click on Finish.
 3. Create your own project by clicking on Android Application Project in File > New menu.
 4. Right click on your project, click on Properties, choose Android, click on Add... in Library tab and then add SQLsync library.
