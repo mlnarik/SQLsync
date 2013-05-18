@@ -125,13 +125,14 @@ public class TestTask extends AsyncTask<Void, Void, Void> {
     	}
     	
     	try {
-			Thread.sleep(4000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
     	
     	
     	//Next phase
+    	SampleActivity.testPhase.drainPermits();
 		SyncExecutor.requestSync();			
 		try {
 			SampleActivity.testPhase.acquire();

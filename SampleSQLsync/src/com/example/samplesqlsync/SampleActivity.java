@@ -157,7 +157,6 @@ public class SampleActivity extends Activity {
     	clearText();
     	displayText("Testing synchronization\nThis operation might take a minute...\n");
     	
-    	testPhase.drainPermits();
     	new TestTask(this, cr).execute();
     }
 
