@@ -38,31 +38,39 @@ public class TestTask extends AsyncTask<Void, Void, Void> {
 	private SampleActivity callerActivity;
 	private ContentResolver cr;
 	
-	private void addText(String text) {
-		displayText += text + "\n";    		
-	}
+	private final Object textLock = new Object();
 	
 	public TestTask(SampleActivity callerActivity, ContentResolver cr) {
 		this.callerActivity = callerActivity;
 		this.cr = cr;
 	}
 	
+	private void addText(String text) {
+		synchronized (textLock) {
+			displayText += text + "\n";
+		}
+	}
+	
 	@Override
 	protected void onProgressUpdate(Void... values) {
 		
-		callerActivity.displayText(displayText);	
-		displayText = "";
-		
-		super.onProgressUpdate(values);
+		synchronized (textLock) {
+			callerActivity.displayText(displayText);	
+			displayText = "";
+			
+			super.onProgressUpdate(values);
+		}
 	}
 	
 	@Override
 	protected void onPostExecute(Void result) {
-		callerActivity.displayText(displayText);	
-		displayText = "";
-		
-		super.onPostExecute(result);
-	}	
+		synchronized (textLock) {
+			callerActivity.displayText(displayText);	
+			displayText = "";
+			
+			super.onPostExecute(result);
+		}
+	}
 	
 	@Override
 	protected Void doInBackground(Void... params) {
@@ -122,10 +130,19 @@ public class TestTask extends AsyncTask<Void, Void, Void> {
 		        }
 		    	c.close();	
 	    	}
+	    	
+	    	if (no%2 == 1) {
+	    		addText((no+1)*10 + "% complete...");
+	        	publishProgress();
+	    		
+	    	}	    	
     	}
     	
+    	addText("Finishing process...");
+    	publishProgress();
+    	
     	try {
-			Thread.sleep(10000);
+			Thread.sleep(6000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

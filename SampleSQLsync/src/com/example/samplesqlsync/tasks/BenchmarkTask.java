@@ -39,15 +39,15 @@ public class BenchmarkTask extends AsyncTask<Void, Void, Void> {
 	private final int nValues = 50;
 	private final Object textLock = new Object();
 	
+	public BenchmarkTask(SampleActivity callerActivity, ContentResolver cr) {
+		this.callerActivity = callerActivity;
+		this.cr = cr;
+	}	
+	
 	private void addText(String text) {
 		synchronized (textLock) {
 			displayText += text + "\n";
 		}
-	}
-	
-	public BenchmarkTask(SampleActivity callerActivity, ContentResolver cr) {
-		this.callerActivity = callerActivity;
-		this.cr = cr;
 	}
 	
 	@Override
