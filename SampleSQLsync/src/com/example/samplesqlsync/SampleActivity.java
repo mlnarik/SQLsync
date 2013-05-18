@@ -18,10 +18,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 /**
- * Test functionality of master-master synchronization library
+ * Tests functionality of master-master synchronization library
  * and measures its speed after execution of certain operations
- * on custom database
- *
+ * on custom database.
+ * It provides only basic UI for easy understanding of library functions.
  */
 public class SampleActivity extends Activity {
 	
