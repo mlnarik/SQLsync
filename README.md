@@ -32,3 +32,14 @@ These are necessary steps to set up the library. If you don't follow described s
 12. Use SyncExecutor.createAccount(name, password, getApplicationContext()) to create synchronization account. Name and password will be send to the webservice on your remote server.
 11. Use class SyncSettings in package "com.rathma.sqlsync.settings" to define tables for synchronization. Set URL address to webservice in field URL\_WEBSERVICE. Set AUTHORITY field to name of your project's package.
 12. Set res/value.xml to name of your project's package.
+ 
+## Example application
+
+This library is supplied with a simple sample application that demonstrates how to properly use it.
+
+![Sample](http://nexusray.com/external/SQLsync/device.png)
+
+## How library works
+
+![Sequence diagram](http://nexusray.com/external/SQLsync/seqfull.jpg)
+
