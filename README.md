@@ -1,8 +1,8 @@
-#SQLsync
+# SQLsync
 
 This library will help you synchronize databases across all mobile devices that uses your application. Library provides fast master-master replication that synchronizes application's database on any Android mobile device with remote PostgreSQL database. Remote database serves as middleman, it's always available and helps with synchronization.
 
-##Features
+## Features
 - fast
 - easy to use
 - automatic conflict resolution
@@ -10,11 +10,11 @@ This library will help you synchronize databases across all mobile devices that 
 - minimal hardware requirements
 - logs conflicts
 
-##Requirements
+## Requirements
 - custom server with PostgreSQL database (MySQL supported soon)
 - knowledge about master-master replication limitations (see [Oracle article](http://docs.oracle.com/cd/B12037_01/server.101/b10732/repconfl.htm))
 
-##Installation
+## Installation
 
 These are necessary steps to set up the library. If you don't follow described steps, synchronization might not work correctly.
 
@@ -36,10 +36,4 @@ These are necessary steps to set up the library. If you don't follow described s
 ## Example application
 
 This library is supplied with a simple sample application that demonstrates how to properly use it.
-
-![Sample](http://nexusray.com/external/SQLsync/device.png)
-
-## How library works
-
-![Sequence diagram](http://nexusray.com/external/SQLsync/seqfull.jpg)
 
